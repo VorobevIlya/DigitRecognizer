@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DigitRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-Sx-3sp">
+                                <rect key="frame" x="0.0" y="47" width="390" height="322"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhP-fW-WTq">
+                                <rect key="frame" x="0.0" y="377" width="195" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cix-l9-DN5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAl-5Z-3ED"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuW-mC-Bqp">
+                                <rect key="frame" x="195" y="377" width="195" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recognize"/>
+                                <connections>
+                                    <action selector="recognizeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ie-9T-GmA"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8v-Di-1tM" customClass="CanvasView" customModule="DigitRecognizer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="420" width="390" height="390"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G8v-Di-1tM" secondAttribute="height" multiplier="1:1" id="0HK-ao-EJM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fuW-mC-Bqp" secondAttribute="trailing" id="1Zs-rA-3Aa"/>
+                            <constraint firstItem="HhP-fW-WTq" firstAttribute="top" secondItem="Lkd-Sx-3sp" secondAttribute="bottom" constant="8" symbolic="YES" id="2yI-9H-Ih0"/>
+                            <constraint firstItem="HhP-fW-WTq" firstAttribute="width" secondItem="fuW-mC-Bqp" secondAttribute="width" id="4Jw-D8-TQB"/>
+                            <constraint firstItem="HhP-fW-WTq" firstAttribute="height" secondItem="fuW-mC-Bqp" secondAttribute="height" id="A9X-Rm-lLI"/>
+                            <constraint firstItem="fuW-mC-Bqp" firstAttribute="leading" secondItem="HhP-fW-WTq" secondAttribute="trailing" id="FAr-xH-enp"/>
+                            <constraint firstItem="G8v-Di-1tM" firstAttribute="top" secondItem="HhP-fW-WTq" secondAttribute="bottom" constant="8" symbolic="YES" id="Kja-Dk-V1w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lkd-Sx-3sp" secondAttribute="trailing" id="TBm-CS-k2N"/>
+                            <constraint firstItem="Lkd-Sx-3sp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TX5-rM-SCc"/>
+                            <constraint firstItem="fuW-mC-Bqp" firstAttribute="top" secondItem="Lkd-Sx-3sp" secondAttribute="bottom" constant="8" symbolic="YES" id="Wuj-0r-Rzt"/>
+                            <constraint firstItem="Lkd-Sx-3sp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qUf-7c-yVx"/>
+                            <constraint firstItem="HhP-fW-WTq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r3e-zF-GNw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G8v-Di-1tM" secondAttribute="trailing" id="rtj-zI-4dq"/>
+                            <constraint firstItem="G8v-Di-1tM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sRA-CH-oO5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G8v-Di-1tM" secondAttribute="bottom" id="tM6-T4-lWf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canvasView" destination="G8v-Di-1tM" id="fPq-YB-j2a"/>
+                        <outlet property="label" destination="Lkd-Sx-3sp" id="c0A-z9-YOn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.76923076923077" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
