@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var canvasView: CanvasView!
     @IBOutlet var label: UILabel!
+    @IBOutlet var confidenceLabel: UILabel!
     
     var requests = [VNRequest]()
     
@@ -45,11 +46,12 @@ class ViewController: UIViewController {
         
         let classifications = observations
             .compactMap({ $0 as? VNClassificationObservation })
-            .filter({ $0.confidence > 0.8 })
-            .map({ $0.identifier })
         
         DispatchQueue.main.async {
-            self.label.text = classifications.first
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .percent
+            self.label.text = classifications.first?.identifier
+            self.confidenceLabel.text = formatter.string(from: (classifications.first?.confidence ?? 0.0) as NSNumber)
         }
     }
 

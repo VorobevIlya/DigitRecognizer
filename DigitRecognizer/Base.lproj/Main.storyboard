@@ -49,6 +49,12 @@
                                     <constraint firstAttribute="width" secondItem="G8v-Di-1tM" secondAttribute="height" multiplier="1:1" id="0HK-ao-EJM"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-H2-kmf">
+                                <rect key="frame" x="334.66666666666669" y="348" width="39.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,12 +62,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fuW-mC-Bqp" secondAttribute="trailing" id="1Zs-rA-3Aa"/>
                             <constraint firstItem="HhP-fW-WTq" firstAttribute="top" secondItem="Lkd-Sx-3sp" secondAttribute="bottom" constant="8" symbolic="YES" id="2yI-9H-Ih0"/>
                             <constraint firstItem="HhP-fW-WTq" firstAttribute="width" secondItem="fuW-mC-Bqp" secondAttribute="width" id="4Jw-D8-TQB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oiW-H2-kmf" secondAttribute="trailing" constant="16" id="6dd-yW-xqs"/>
                             <constraint firstItem="HhP-fW-WTq" firstAttribute="height" secondItem="fuW-mC-Bqp" secondAttribute="height" id="A9X-Rm-lLI"/>
                             <constraint firstItem="fuW-mC-Bqp" firstAttribute="leading" secondItem="HhP-fW-WTq" secondAttribute="trailing" id="FAr-xH-enp"/>
                             <constraint firstItem="G8v-Di-1tM" firstAttribute="top" secondItem="HhP-fW-WTq" secondAttribute="bottom" constant="8" symbolic="YES" id="Kja-Dk-V1w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lkd-Sx-3sp" secondAttribute="trailing" id="TBm-CS-k2N"/>
                             <constraint firstItem="Lkd-Sx-3sp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TX5-rM-SCc"/>
                             <constraint firstItem="fuW-mC-Bqp" firstAttribute="top" secondItem="Lkd-Sx-3sp" secondAttribute="bottom" constant="8" symbolic="YES" id="Wuj-0r-Rzt"/>
+                            <constraint firstItem="fuW-mC-Bqp" firstAttribute="top" secondItem="oiW-H2-kmf" secondAttribute="bottom" constant="8" symbolic="YES" id="Y1D-5Y-P5I"/>
                             <constraint firstItem="Lkd-Sx-3sp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qUf-7c-yVx"/>
                             <constraint firstItem="HhP-fW-WTq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r3e-zF-GNw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G8v-Di-1tM" secondAttribute="trailing" id="rtj-zI-4dq"/>
@@ -71,6 +79,7 @@
                     </view>
                     <connections>
                         <outlet property="canvasView" destination="G8v-Di-1tM" id="fPq-YB-j2a"/>
+                        <outlet property="confidenceLabel" destination="oiW-H2-kmf" id="8hL-V6-ZWw"/>
                         <outlet property="label" destination="Lkd-Sx-3sp" id="c0A-z9-YOn"/>
                     </connections>
                 </viewController>
